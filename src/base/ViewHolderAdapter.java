@@ -1,9 +1,9 @@
 package base;
-
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.Adapter;
 import android.view.View;
 import android.view.ViewGroup;
+
 public abstract class ViewHolderAdapter extends Adapter<ViewHolderAdapter.ViewHolder> {
 	 private View mitemview;
 	 public ViewHolderAdapter(){
@@ -13,13 +13,15 @@ public abstract class ViewHolderAdapter extends Adapter<ViewHolderAdapter.ViewHo
 		 return mitemview;
 	 }
 	 public abstract void setItemView();
+	 
 	 public static class ViewHolder extends RecyclerView.ViewHolder {
 	       protected  View mView;
 	        public ViewHolder(View v) {
 	            super(v);
 	            mView = v;
 	        }
-	    }
+	 }
+	 
 	 @Override
 	 public ViewHolderAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
     // create a new view
